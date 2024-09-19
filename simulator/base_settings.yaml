@@ -1,0 +1,20 @@
+base_settings:
+max_parts_to_merge_at_once: 100
+base: 5
+min_size_to_lower_base: 1048576  # 1024 * 1024
+max_size_to_lower_base: 107374182400  # 100 * 1024 * 1024 * 1024
+min_age_to_lower_base_at_min_size: 10
+min_age_to_lower_base_at_max_size: 10
+max_age_to_lower_base_at_min_size: 3600
+max_age_to_lower_base_at_max_size: 2592000 # 30 * 86400
+min_parts_to_lower_base: 10
+max_parts_to_lower_base: 50
+size_fixed_cost_to_add: 5242880  # 5 * 1024 * 1024
+enable_heuristic_to_align_parts: true
+heuristic_to_align_parts_min_ratio_of_sum_size_to_prev_part: 0.9
+heuristic_to_align_parts_max_absolute_difference_in_powers_of_two: 0.5
+heuristic_to_align_parts_max_score_adjustment: 0.75
+min_age_to_force_merge: 0
+enable_heuristic_to_remove_small_parts_at_right: true
+heuristic_to_remove_small_parts_at_right_max_ratio: 0.01
+max_total_size_to_merge: 20000
