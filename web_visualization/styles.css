@@ -1,0 +1,98 @@
+body {
+    font-family: Segoe UI, sans-serif;
+    background-color: #f0f2f5;
+    /* Используем Flexbox для выравнивания содержимого по центру */
+    display: flex;
+    /* Располагаем элементы по вертикали */
+    flex-direction: column;
+    /* Центрирует элементы по горизонтали. */
+    align-items: center;
+    /* Центрирует элементы по вертикали. */
+    justify-content: center;
+}
+
+h1 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+#visualization {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 750px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.part {
+    position: relative;
+    width: 180px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    margin: 0 15px;
+    /* Анимации */
+    transition: height 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55), transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.3s ease-in-out, box-shadow 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    /* Градиент фона от голубого к синему */
+    background: linear-gradient(135deg, #6ec1e4, #007bff);
+}
+
+.part.merged {
+    /* Градиент от оранжевого к красному для объединенных частей */
+    background: linear-gradient(135deg, #f8b500, #fc4a1a);
+}
+
+.part:hover {
+    /* Эффект при наведении на часть данных */
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.2s ease-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+#action_text {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+}
